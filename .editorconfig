@@ -29,6 +29,8 @@ dotnet_style_qualification_for_method = true:none
 dotnet_style_qualification_for_event = true:none
 # 'using' directive preferences
 csharp_using_directive_placement = outside_namespace:warning
+# Code block preferences
+csharp_prefer_braces = when_multiline:warning
 # End Custom Rules
 
 ##########################################
@@ -164,8 +166,6 @@ csharp_style_implicit_object_creation_when_type_is_apparent = true:warning
 # "Null" checking preferences
 csharp_style_throw_expression = true:warning
 csharp_style_conditional_delegate_call = true:warning
-# Code block preferences
-csharp_prefer_braces = true:warning
 csharp_prefer_simple_using_statement = true:suggestion
 dotnet_diagnostic.IDE0063.severity = suggestion
 # Modifier preferences
