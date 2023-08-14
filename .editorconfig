@@ -88,8 +88,8 @@ dotnet_naming_rule.stylecop_constant_fields_must_be_pascal_case_rule.symbols    
 dotnet_naming_rule.stylecop_constant_fields_must_be_pascal_case_rule.style      = upper_case_style
 dotnet_naming_rule.stylecop_constant_fields_must_be_pascal_case_rule.severity   = warning
 # Expression-bodied members
-csharp_style_expression_bodied_methods = when_on_single_line:silent
-csharp_style_expression_bodied_constructors = when_on_single_line:silent
+csharp_style_expression_bodied_methods = false:suggestion
+csharp_style_expression_bodied_constructors = false:suggestion
 csharp_style_expression_bodied_operators = true:suggestion
 csharp_style_expression_bodied_properties = true:suggestion
 csharp_style_expression_bodied_indexers = true:suggestion
