@@ -13,14 +13,38 @@ indent_size = 4
 insert_final_newline = true
 trim_trailing_whitespace = true
 
+# ReSharper properties
+resharper_braces_for_foreach = required_for_multiline
+resharper_braces_for_ifelse = required_for_multiline
+resharper_braces_for_using = not_required
+resharper_braces_for_while = required_for_multiline
+resharper_braces_redundant = false
+max_line_length = 119
+resharper_wrap_before_eq = true
+resharper_keep_existing_arrangement = true
+resharper_place_accessorholder_attribute_on_same_line = false
+resharper_place_simple_embedded_statement_on_same_line = if_owner_is_single_line
+resharper_wrap_object_and_collection_initializer_style = chop_if_long
+
 # Highly Opinionated Styles
 [*.{cs,csx,cake,vb,vbx}]
 # missing case statements
 dotnet_diagnostic.IDE0010.severity = silent
-# use locale on string comparisons
+# use locale - globalization
+dotnet_diagnostic.CA1303.severity = silent
+dotnet_diagnostic.CA1304.severity = silent
+dotnet_diagnostic.CA1305.severity = silent
+dotnet_diagnostic.CA1307.severity = silent
+dotnet_diagnostic.CA1308.severity = silent
+dotnet_diagnostic.CA1309.severity = silent
 dotnet_diagnostic.CA1310.severity = silent
+dotnet_diagnostic.CA1311.severity = silent
 # underscore in names
 dotnet_diagnostic.CA1707.severity = silent
+# exception not too specific
+dotnet_diagnostic.CA2201.severity = silent
+# can be marked as static
+dotnet_diagnostic.CA1822.severity = silent
 # "this." and "Me." qualifiers
 dotnet_style_qualification_for_field = true:none
 dotnet_style_qualification_for_property = true:none
@@ -63,6 +87,17 @@ dotnet_naming_symbols.stylecop_constant_fields_group.applicable_kinds           
 dotnet_naming_rule.stylecop_constant_fields_must_be_pascal_case_rule.symbols    = stylecop_constant_fields_group
 dotnet_naming_rule.stylecop_constant_fields_must_be_pascal_case_rule.style      = upper_case_style
 dotnet_naming_rule.stylecop_constant_fields_must_be_pascal_case_rule.severity   = warning
+# Expression-bodied members
+csharp_style_expression_bodied_methods = when_on_single_line:silent
+csharp_style_expression_bodied_constructors = when_on_single_line:silent
+csharp_style_expression_bodied_operators = true:suggestion
+csharp_style_expression_bodied_properties = true:suggestion
+csharp_style_expression_bodied_indexers = true:suggestion
+csharp_style_expression_bodied_accessors = true:suggestion
+csharp_style_expression_bodied_lambdas = when_on_single_line:suggestion
+csharp_style_expression_bodied_local_functions = when_on_single_line:suggestion
+# new line on object initializers
+csharp_new_line_before_members_in_object_initializers = false
 # End Custom Rules
 
 ##########################################
@@ -172,15 +207,6 @@ csharp_style_prefer_null_check_over_type_check = true:warning
 csharp_style_var_for_built_in_types = true:warning
 csharp_style_var_when_type_is_apparent = true:warning
 csharp_style_var_elsewhere = true:warning
-# Expression-bodied members
-csharp_style_expression_bodied_methods = true:warning
-csharp_style_expression_bodied_constructors = true:warning
-csharp_style_expression_bodied_operators = true:warning
-csharp_style_expression_bodied_properties = true:warning
-csharp_style_expression_bodied_indexers = true:warning
-csharp_style_expression_bodied_accessors = true:warning
-csharp_style_expression_bodied_lambdas = true:warning
-csharp_style_expression_bodied_local_functions = true:warning
 # Pattern matching preferences
 csharp_style_pattern_matching_over_is_with_cast_check = true:warning
 csharp_style_pattern_matching_over_as_with_null_check = true:warning
@@ -244,7 +270,6 @@ csharp_new_line_before_open_brace = all
 csharp_new_line_before_else = true
 csharp_new_line_before_catch = true
 csharp_new_line_before_finally = true
-csharp_new_line_before_members_in_object_initializers = true
 csharp_new_line_before_members_in_anonymous_types = true
 csharp_new_line_between_query_expression_clauses = true
 # Indentation options
