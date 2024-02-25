@@ -48,10 +48,10 @@ dotnet_diagnostic.CA1822.severity = silent
 # seal class
 dotnet_diagnostic.CA1852.severity = silent
 # "this." and "Me." qualifiers
-dotnet_style_qualification_for_field = true:none
-dotnet_style_qualification_for_property = true:none
-dotnet_style_qualification_for_method = true:none
-dotnet_style_qualification_for_event = true:none
+dotnet_style_qualification_for_field = false:none
+dotnet_style_qualification_for_property = false:none
+dotnet_style_qualification_for_method = false:none
+dotnet_style_qualification_for_event = false:none
 # 'using' directive preferences
 csharp_using_directive_placement = outside_namespace:warning
 # Code block preferences
