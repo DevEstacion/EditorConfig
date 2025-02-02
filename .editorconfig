@@ -22,7 +22,6 @@ resharper_braces_for_while = required_for_multiline
 resharper_braces_redundant = false
 resharper_csharp_insert_final_newline = true
 resharper_csharp_keep_existing_enum_arrangement = false
-resharper_csharp_max_line_length = 126
 resharper_html_insert_final_newline = false
 resharper_instance_members_qualify_declared_in = 
 resharper_keep_existing_attribute_arrangement = true
